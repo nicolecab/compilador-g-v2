@@ -1,0 +1,17 @@
+# Build artifacts
+g-v2
+*.o
+lex.yy.c
+g-v2.tab.c
+g-v2.tab.h
+
+# Generated assembly
+*.asm
+
+# OS files
+.DS_Store
+__MACOSX/
+
+# Editor files
+.vscode/
+.idea/
