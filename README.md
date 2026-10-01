@@ -120,7 +120,3 @@ Para remover arquivos gerados durante a compilação:
 ```bash
 make clean
 ```
-
-## Observação
-
-Este projeto tem finalidade educacional. A geração de código tem como alvo assembly MIPS.
