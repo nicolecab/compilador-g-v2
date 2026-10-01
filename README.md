@@ -1,10 +1,8 @@
 # Compilador G-V2
 
-Este repositório contém a implementação de um compilador didático para a linguagem G-V2, desenvolvido como um projeto de estudo sobre construção de compiladores.
+Implementação de um compilador para a linguagem G-V2, a fim de estudar a construção de compiladores.
 
-O objetivo do projeto é implementar, de forma integrada, as principais etapas de um compilador: análise léxica, análise sintática, construção de árvore sintática abstrata, tabela de símbolos, análise semântica e geração de código.
-
-O compilador recebe programas escritos em G-V2 e gera código em assembly MIPS.
+O compilador recebe programas escritos em G-V2 e gera código em assembly MIPS, passando por análise léxica, análise sintática, construção de AST, tabela de símbolos, análise semântica e geração de código.
 
 ## Sobre a Linguagem
 
@@ -43,27 +41,14 @@ principal {
 }
 ```
 
-## Estrutura do Compilador
+## Etapas
 
-O compilador está organizado nas seguintes etapas:
-
-1. **Análise léxica**  
-   Implementada com Flex no arquivo `g-v2.l`.
-
-2. **Análise sintática e construção da AST**  
-   Implementada com Bison no arquivo `g-v2.y`.
-
-3. **Árvore Sintática Abstrata**  
-   Implementada em `ast.h` e `ast.c`.
-
-4. **Tabela de símbolos**  
-   Implementada como uma pilha de escopos em `tabela_simbolos.h` e `tabela_simbolos.c`.
-
-5. **Análise semântica**  
-   Implementada em `semantico.h` e `semantico.c`.
-
-6. **Geração de código**  
-   Implementada em `gerador_codigo.h` e `gerador_codigo.c`, gerando assembly MIPS.
+- Análise léxica com Flex (`g-v2.l`);
+- análise sintática e construção da AST com Bison (`g-v2.y`);
+- representação da AST (`ast.h` e `ast.c`);
+- tabela de símbolos com pilha de escopos (`tabela_simbolos.h` e `tabela_simbolos.c`);
+- análise semântica (`semantico.h` e `semantico.c`);
+- geração de código MIPS (`gerador_codigo.h` e `gerador_codigo.c`).
 
 ## Estrutura dos Arquivos
 
@@ -135,8 +120,6 @@ Para remover arquivos gerados durante a compilação:
 make clean
 ```
 
-## Observações
+## Observação
 
-Este projeto tem finalidade educacional e busca tornar explícitas as principais etapas internas de um compilador.
-
-A geração de código tem como alvo assembly MIPS.
+Este projeto tem finalidade educacional. A geração de código tem como alvo assembly MIPS.
