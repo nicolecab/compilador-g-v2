@@ -1,0 +1,16 @@
+global [
+    x:int;
+]
+
+funcao [
+    soma(a:int, b:int):int {
+        retorne a + b;
+    }
+]
+
+principal {
+    x = soma(1, 2);
+    escreva "Resultado: ";
+    escreva x;
+    novalinha;
+}

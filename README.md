@@ -64,6 +64,7 @@ principal {
 ├── semantico.h
 ├── gerador_codigo.c
 ├── gerador_codigo.h
+├── exemplos/
 └── Makefile
 ```
 
